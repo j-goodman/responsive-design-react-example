@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Rethink+Sans&display=swap');
+
+body {
+    font-family: 'Rethink Sans', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Kalnia', serif;
+}
+
+.nav-bar, .mobile-nav-bar {
+    background-color: #7dab8b;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.nav-bar-item {
+    display: flex;
+    flex-direction: row;
+    font-size: 2em;
+    padding: 16px 64px;
+}
+
+.nav-bar-item input {
+    font-size: 1em;
+    margin-left: 16px;
+    width: 200px;
+}
+
+.nav-bar-item:hover {
+    background-color: #567662;
+    color: #fff;
+    cursor: pointer;
+}
+
+.no-hover:hover {
+    background-color: #7dab8b;
+    color: #000;
+    cursor: auto;
+}
+
+.main-body {
+    display: flex;
+    flex-direction: row;
+    padding: 32px;
+}
+
+.homepage-photos img {
+    height: 220px;
+    object-fit: cover;
+    width: 480px;
+}
+
+.homepage-text {
+    font-size: 1.2em;
+    margin-left: 32px;
+    padding-top: 32px;
+    text-align: right;
+}
+
+.mobile-nav-bar {
+    display: none;
+}
+
+.mobile-nav-dropdown {
+    background-color: #7dab8b;
+    display: none;
+    font-size: .8em;
+    position: absolute;
+    right: 0px;
+}
+
+@media (max-width: 940px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .mobile-nav-bar {
+        display: flex;
+    }
+
+    .mobile-nav-dropdown {
+        display: block;
+    }
+}
+
+@media (max-width: 840px) {
+    .main-body {
+        flex-direction: column-reverse;
+    }
+    
+    .homepage-text {
+        padding-top: 0;
+        text-align: left;
+    }
+    
+    .homepage-photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .homepage-photos img {
+        height: 370px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 310px) {
+    .homepage-text {
+        font-size: .8em;
+    }
+}
